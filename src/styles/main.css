@@ -41,7 +41,7 @@ body {
     min-height: 100vh;
      background: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.829)),
-        url(../src/images/horror-pumpkins-halloween.jpg) no-repeat center;
+        url(src/images/horror-pumpkins-halloween.jpg) no-repeat center;
     background-size: cover;
 
     user-select: none;
