@@ -184,7 +184,201 @@ h2 {
   }
 
   h2 {
+    font-size: 2rem;.start-screen {
+    position: fixed;
+    inset: 0;
+    background: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.start-screen h1 {
+    color: #ff0000;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #660000;
+    margin-bottom: 30px;
+}
+
+.start-screen button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: 2px solid #ff0000;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-screen button:hover {
+    background-color: #330000;
+    color: #ff0000;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.829)),
+        url(../images/horror-pumpkins-halloween.jpg) no-repeat center;
+    background-size: cover;
+
+    user-select: none;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(325deg,
+    #1a0000 0%,
+    #0c000c 30%,
+    #660000 70%,
+    #0d0d0d 100%);
+    padding: 40px 60px;
+    border: 3px solid #660000;
+    box-shadow: 0 0 40px rgba(255,0,0,0.4);
+    border-radius: 15px;
+    width: 100%;         /* 🔥 antes era 90%, agora ocupa 100% */
+    max-width: 500px;    /* 🔥 continua limitado no desktop */
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #660000;
+    text-align: center;
+}
+
+.reset {
+    padding: 12px;
+    width: 100%;
+    color: #fff;
+    background-color: #1a1a1a;
+    border: 2px solid #ff0000;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.reset:hover {
+    background-color: #330000;
+    color: #ff0000;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.game {
+    width: 100%;   /* 🔥 ocupa toda a largura disponível */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 🔥 sempre 4 colunas */
+    gap: 8px;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    color: #fff;
+    font-size: clamp(2rem, 8vw, 3rem); /* 🔥 emojis maiores e responsivos */
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    border: 2px solid #660000;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,0,0,0.3);
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #660000;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+    background: #330000;
+    color: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}
+
+/* efeito de brilho quando acerta */
+.glow {
+    box-shadow: 0 0 25px #ff0000, 0 0 50px #ff0000;
+    animation: flicker 0.3s alternate 3;
+}
+
+@keyframes flicker {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* 📱 Responsividade */
+
+@media (max-width: 768px) {
+  .game {
+    gap: 6px;
+  }
+
+  .item {
+    font-size: clamp(2.2rem, 9vw, 3.5rem); /* 🔥 emojis ainda maiores */
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 100%;   /* 🔥 ocupa toda a tela no celular */
+    padding: 20px;     /* 🔥 reduz o padding pra caber melhor */
+  }
+
+  .game {
+    gap: 5px;
+  }
+
+  .item {
+    font-size: clamp(2.5rem, 12vw, 4rem); /* 🔥 emojis bem grandes */
+  }
+
+  h2 {
     font-size: 2rem;
+  }
+
+  .reset {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
   }
 
   .reset {
