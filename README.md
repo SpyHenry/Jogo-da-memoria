@@ -22,7 +22,7 @@
 - **JavaScript** – Lógica e interatividade do jogo.  
 
 ---
-![Preview do Jogo](<img width="736" height="631" alt="previa" src="https://github.com/user-attachments/assets/19b684e6-de18-4468-8bea-436481f4a478" />
+![Preview do Jogo](https://github.com/user-attachments/assets/19b684e6-de18-4468-8bea-436481f4a478>
 )
 
 
