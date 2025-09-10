@@ -22,11 +22,3 @@
 - **JavaScript** – Lógica e interatividade do jogo.  
 
 ---
-
-## 🎮 Como Jogar
-
-1. Abra o arquivo `index.html` no navegador.  
-2. Clique nas cartas para virá-las e encontrar pares correspondentes.  
-3. Combine todas as cartas usando o **menor número de tentativas possível**!  
-
----
