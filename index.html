@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasmemória</title>
+
+    <link rel="shortcut icon" type="imagex/png" href="/src/images/favicon.jpg">
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tela inicial -->
+    <div class="start-screen" id="startScreen">
+        <h1>Jogo da Memória Fantasmagórico</h1>
+        <button id="startButton">Começar</button>
+    </div>
+
+    <!-- Tabuleiro do jogo -->
+    <div class="container" id="gameContainer" style="display:none;">
+        <h2>FANTASMEMÓRIA</h2>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload()">RESET GAME</button>
+    </div>
+
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+</html>
