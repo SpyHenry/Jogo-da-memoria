@@ -158,12 +158,37 @@ h2 {
     to { opacity: 0.6; }
 }
 
-@media (max-width: 500px) {
-  .card {
-    width: 40%;
-    height: auto;
+/* 📱 Responsividade */
+
+@media (max-width: 768px) {
+  .game {
+    max-width: 350px;
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+    gap: 6px;
   }
-  .game-container {
+
+  .item {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .game {
+    max-width: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 5px;
+  }
+
+  .item {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .reset {
+    font-size: 1rem;
     padding: 10px;
   }
 }
