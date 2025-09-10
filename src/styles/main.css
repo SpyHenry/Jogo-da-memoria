@@ -157,3 +157,13 @@ h2 {
     from { opacity: 1; }
     to { opacity: 0.6; }
 }
+
+@media (max-width: 500px) {
+  .card {
+    width: 40%;
+    height: auto;
+  }
+  .game-container {
+    padding: 10px;
+  }
+}
