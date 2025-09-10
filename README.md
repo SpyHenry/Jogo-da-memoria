@@ -22,8 +22,7 @@
 - **JavaScript** – Lógica e interatividade do jogo.  
 
 ---
-![Preview do Jogo](https://github.com/user-attachments/assets/19b684e6-de18-4468-8bea-436481f4a478>
-)
+![Preview do Jogo](src/images/previa.png)
 
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henrique-baptista-bandeira)
