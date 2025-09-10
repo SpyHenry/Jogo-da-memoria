@@ -1,157 +1,211 @@
+/* 🎃 Tela inicial */
 .start-screen {
-    position: fixed;
-    inset: 0;
-    background: #0d0d0d;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .start-screen h1 {
-    color: #ff0000;
-    font-size: 3rem;
-    text-align: center;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #660000;
-    margin-bottom: 30px;
+  color: #ff0000;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #660000;
+  margin-bottom: 30px;
 }
 
 .start-screen button {
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    border: 2px solid #ff0000;
-    background-color: #1a1a1a;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: 2px solid #ff0000;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .start-screen button:hover {
-    background-color: #330000;
-    color: #ff0000;
-    box-shadow: 0 0 15px #ff0000;
+  background-color: #330000;
+  color: #ff0000;
+  box-shadow: 0 0 15px #ff0000;
 }
 
+/* 🌌 Fundo principal */
 body {
-
-    display: flex;
-    min-height: 100vh;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.829)),
-        url(../images/horror-pumpkins-halloween.jpg) no-repeat center;
-    background-size: cover;
-    user-select: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.829)),
+    url(../images/horror-pumpkins-halloween.jpg) no-repeat center;
+  background-size: cover;
+  user-select: none;
 }
 
+/* 📦 Container do jogo */
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background: linear-gradient(325deg,
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  background: linear-gradient(
+    325deg,
     #1a0000 0%,
     #0c000c 30%,
     #660000 70%,
-    #0d0d0d 100%);
-    padding: 40px 60px;
-    border: 3px solid #660000;
-    box-shadow: 0 0 40px rgba(255,0,0,0.4);
-    border-radius: 15px;
+    #0d0d0d 100%
+  );
 
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
+  padding: 40px 60px;
+  border: 3px solid #660000;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
 }
 
 h2 {
-    font-size: 2.5em;
-    color: #ff0000;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #660000;
-    text-align: center;
+  font-size: 2.5em;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #660000;
 }
 
+/* 🔄 Botão reset */
 .reset {
-    padding: 12px;
-    width: 100%;
-    color: #fff;
-    background-color: #1a1a1a;
-    border: 2px solid #ff0000;
-    font-size: 1.2em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: 0.3s;
+  width: 100%;
+  padding: 12px;
+
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: #1a1a1a;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .reset:hover {
-    background-color: #330000;
-    color: #ff0000;
-    box-shadow: 0 0 15px #ff0000;
+  background-color: #330000;
+  color: #ff0000;
+  box-shadow: 0 0 15px #ff0000;
 }
 
+/* 🎮 Tabuleiro do jogo */
 .game {
-    width: 100%; 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    perspective: 500px;
+  width: 100%;
+  max-width: 430px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 8px;
+
+  perspective: 500px;
 }
 
+/* 🧩 Cartas */
 .item {
-    aspect-ratio: 1 / 1;
-    font-size: clamp(2rem, 8vw, 3rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: #fff;
+
+  background-color: #111;
+  border: 2px solid #660000;
+  border-radius: 12px;
+
+  transform: rotateY(180deg);
+  transition: 0.25s;
+
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
-/* Efeito de brilho quando acerta */
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: #660000;
+  border-radius: 12px;
+
+  transform: rotateY(0deg);
+  transition: 0.25s;
+
+  backface-visibility: hidden;
+}
+
+.item.boxOpen {
+  transform: rotateY(0deg);
+  background: #330000;
+  color: #ff0000;
+  box-shadow: 0 0 25px #ff0000;
+}
+
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(180deg);
+}
+
+/* ✨ Efeito de brilho ao acertar */
 .glow {
-    box-shadow: 0 0 25px #ff0000, 0 0 50px #ff0000;
-    animation: flicker 0.3s alternate 3;
+  box-shadow: 0 0 25px #ff0000, 0 0 50px #ff0000;
+  animation: flicker 0.3s alternate 3;
 }
 
 @keyframes flicker {
-    from { opacity: 1; }
-    to { opacity: 0.6; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
 }
 
-/*📱 Responsividade */
-
+/* 📱 Responsividade */
 @media (max-width: 768px) {
   .game {
+    max-width: 350px;
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
     gap: 6px;
   }
 
   .item {
-    font-size: clamp(2.2rem, 10vw, 3.8rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
   }
 }
 
 @media (max-width: 500px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;   
-  }
-
   .game {
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    max-width: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: 5px;
   }
 
   .item {
-    font-size: clamp(2.5rem, 15vw, 5rem);
+    font-size: clamp(1.2rem, 6vw, 2rem);
   }
 
   h2 {
