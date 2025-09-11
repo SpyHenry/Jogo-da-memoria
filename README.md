@@ -8,7 +8,7 @@
 
 - 👻 **Tema "fantasmagórico"** com emojis de Halloween.  
 - 🔄 **Feedback visual** ao acertar ou errar pares.  
-- 📱 **Design responsivo**, perfeito para desktop e mobile.  
+- 📱 **Design responsivo**, funciona em mobile também.
 - ✨ **Efeitos visuais animados**, deixando o jogo mais imersivo.  
 
 ---
