@@ -6,10 +6,8 @@
 
 ## ✨ Funcionalidades
 
-- 🎴 **Jogo clássico da memória** com pares de cartas.  
 - 👻 **Tema "fantasmagórico"** com emojis de Halloween.  
 - 🔄 **Feedback visual** ao acertar ou errar pares.  
-- 🕹️ **Contador de tentativas** para acompanhar seu desempenho.  
 - 📱 **Design responsivo**, perfeito para desktop e mobile.  
 - ✨ **Efeitos visuais animados**, deixando o jogo mais imersivo.  
 
