@@ -201,19 +201,20 @@ h2 {
   .game {
     max-width: 300px;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 5px;
+    gap: 1.6px;
   }
 
   .item {
-    font-size: clamp(1.2rem, 6vw, 2rem);
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .reset {
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding: 10px;
   }
 }
+
