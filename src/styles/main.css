@@ -238,3 +238,24 @@ h2 {
     padding: 10px;
   }
 }
+
+@media (max-width: 450px) {
+  .game {
+    max-width: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(48.5px, 1fr));
+    gap: 1px;
+  }
+
+  .item {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  .reset {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+}
