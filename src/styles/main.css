@@ -247,7 +247,7 @@ h2 {
   }
 
   .item {
-    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-size: clamp(1.5rem, 6.5vw, 3rem);
   }
 
   h2 {
